@@ -16,7 +16,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/bash";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -96,24 +96,24 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#16161D",
+	"#C34043",
+	"#76946A",
+	"#938056",
+	"#2D4F67",
+	"#54546D",
+	"#658594",
+	"#727169",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#49443C",
+	"#FF5D62",
+	"#98BB6C",
+	"#E6C384",
+	"#7E9CD8",
+	"#E46876",
+	"#7FB4CA",
+	"#DCD7BA",
 
 	[255] = 0,
 
@@ -122,6 +122,12 @@ static const char *colorname[] = {
 	"#555555",
 	"gray90", /* default foreground colour */
 	"black", /* default background colour */
+
+	"#1F1F28", // 260 - background 
+	"#DCD7BA", // 261 - foreground
+	"#C8C093", // 262 - cursor
+	"#223249", // 263 - reverse cursor
+
 };
 
 
@@ -129,10 +135,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 261;
+unsigned int defaultbg = 260;
+unsigned int defaultcs = 262;
+static unsigned int defaultrcs = 263;
 
 /*
  * Default shape of cursor
